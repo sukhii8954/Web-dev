@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>split pages with jQuery</title>
+    <script src="./jQuerylearnings/jquery3.7.1.js"></script>
+    <script src="01_splitPages.js"></script>
+    <style>
+      body {
+        margin: 0;
+      }
+      .split-container {
+        display: flex; /* Still using flexbox container for initial setup - can remove if absolutely needed, but simplifies things */
+        height: 100vh;
+      }
+      .panel {
+        /* flex: 1;  We will control width with jQuery now, so remove flex: 1 */
+        padding: 20px;
+        box-sizing: border-box;
+        overflow: auto;
+      }
+      .panel-left {
+        background-color: lavender;
+        border-right: 1px solid #ccc;
+      }
+      .panel-right {
+        background-color: #f2a2a2;
+      }
+      /* Responsive adjustment with CSS Media Query to stack panels vertically */
+      @media (max-width: 600px) {
+        .split-container {
+          flex-direction: column;
+        }
+        .panel {
+          width: 100% !important; /* Override jQuery width with CSS for small screens */
+          height: auto;
+          border-right: none;
+          border-bottom: 1px solid #ccc;
+        }
+        .panel-left {
+          border-bottom: 1px solid #ccc;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="split-container">
+      <div class="panel panel-left">
+        <h2>Left Panel</h2>
+        <p>Content for the left panel goes here.</p>
+        <p>You can add more text, images, or any other HTML elements.</p>
+        <p>
+          This layout is responsive, meaning it adapts to different screen
+          sizes.
+        </p>
+        <p>Try resizing your browser window to see the effect.</p>
+        <p>
+          For very small screens (like phones in portrait), the panels will
+          stack vertically.
+        </p>
+        <p>
+          More content in the left panel to demonstrate scrolling if needed.
+        </p>
+        <p>Even more content to see the scrollbar appear.</p>
+        <p>And some more...</p>
+      </div>
+      <div class="panel panel-right">
+        <h2>Right Panel</h2>
+        <p>Content for the right panel will be placed here.</p>
+        <p>This is the right side of the split page.</p>
+        <p>
+          You can put forms, navigation, images, videos, or anything else you
+          need in this panel.
+        </p>
+        <p>
+          This is just a basic example. You can customize the styling and
+          content further.
+        </p>
+      </div>
+    </div>
+  </body>
+</html>

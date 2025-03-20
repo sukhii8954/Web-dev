@@ -1,0 +1,63 @@
+jquery features:
+
+--> selectors: use the jquery selectors to select an HTML element and manipulate it
+--> animations: to animate a div or any other element with jQuery.
+
+--> CSS manipulation: manipulate an element and apply css style to it.
+
+--> jQuery Ajax: jQuery has rich set of AJAX methods for developing morden web applications.
+
+--> event methods: call event methods with jQuery .
+Events are the users' actions ,
+ a web page can respond to ,
+such as page load , mouse click , keystroke etc.
+
+--> jQuery traversing: jQuery provide DOM traversal methods to locate descedent elements , 
+find sibling elements etc
+it means : finding (or selecting) elements in relation to other elements in 
+the DOM (HTML structure)
+
+-->Traversing helps you move up (parents), down (children), or 
+sideways (siblings) in this tree to find and manipulate elements.
+
+--> plugins: jQuery has many plugins such as for creating spilt pages , 
+create slideshow , progrssbar etc , with that we can also create your own 
+custom plugins.
+ 
+
+examples of using jQuery:
+$(this).hide() - hides the current element.
+
+$("p").hide() - hides all <p> elements.
+
+$(".test").hide() - hides all elements with class="test".
+
+$("#test").hide() - hides the element with id="test".
+
+
+------------------------------------------------------
+
+$(document).ready(function(){
+
+  // jQuery methods go here...
+
+});
+
+
+-----------------------------------------------------------
+
+("*")	Selects all elements	
+$(this)	Selects the current HTML element	
+$("p.intro")	Selects all <p> elements with class="intro"	
+$("p:first")	Selects the first <p> element	
+$("ul li:first")	Selects the first <li> element of the first <ul>	
+$("ul li:first-child")	Selects the first <li> element of every <ul>	
+$("[href]")	Selects all elements with an href attribute	
+$("a[target='_blank']")	Selects all <a> elements with a target attribute value equal to "_blank"	
+$("a[target!='_blank']")	Selects all <a> elements with a target attribute value NOT equal to "_blank"	
+$(":button")	Selects all <button> elements and <input> elements of type="button"	
+$("tr:even")	Selects all even <tr> elements	 (0 base indexing)
+$("tr:odd")	Selects all odd <tr> elements    (0 base indexing)
+$("p").dblclick()  for double click event 
+$("p").mouseenter() 
+$("p").keypress() :when press a keyboard key inside an <input> element, it should be hidden
