@@ -1,0 +1,91 @@
+/* universal selector */
+* {
+    margin : 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* type selector */
+
+p {
+    font-size: 16px;
+  margin-bottom: 10px;
+}
+
+
+/* class selector */
+
+.highlight{
+    background-color: #6f93f9;
+}
+
+/* id selector */
+
+#header {
+    background-color: #f92929;
+}
+
+
+/* attribute selector */
+
+input[type="text"]{
+   border: 7px solid red;    /* dashed another type of border*/
+}
+
+
+
+/* advanced CSS */
+
+
+/* Descendant Selector */
+
+
+article p{
+  font-style: italic;
+  background-color: #6d3a3a;   
+  padding: 10px;
+}
+
+/* child selector */
+
+div > p {
+    background-color: #880404;
+}
+
+
+ /* 8. Adjacent Sibling Selector */
+ h1 + p {  /* use + for adjecent sibling : all paragraphs who are adj sibling with h1 */
+    font-weight: bold;
+   
+  }
+
+  /* 9. General Sibling Selector */
+  h2 ~ p {
+    color: #860303;
+  }
+
+
+/* 10. Pseudo-class Selector */
+
+a:hover {
+    background-color: #14a50e;
+    text-decoration: none;
+    color: #1a1a1a;
+    padding: 5px;
+    margin: 4px;
+    }
+
+
+/* 11. Pseudo-element Selector */
+p::first-letter {
+    font-weight: bold;
+    font-size: 20px;
+  }
+
+ /* 12. Grouping Selector */
+  h1,
+  h2,
+  h3 {
+    color: orange;
+  }
